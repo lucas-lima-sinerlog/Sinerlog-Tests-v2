@@ -1,0 +1,57 @@
+{
+    "order": {
+        "channel": "Marketplace",
+        "items": [
+            {
+                "id": "cy-code-be50e63b-28e9-4e26-8731-8d8ae647dbb4",
+                "qty": 1,
+                "original_price": 8.45,
+                "special_price": 8.45
+            }
+        ],
+        "customer": {
+            "name": "Nome do comprador",
+            "email": "comprador@exemplo.com.br",
+            "date_of_birth": "1995-01-01",
+            "gender": "male",
+            "vat_number": "51588494047",
+            "phones": [
+                "8899999999"
+            ]
+        },
+        "billing_address": {
+            "street": "Rua de teste",
+            "number": 1234,
+            "detail": "Ponto de referência teste",
+            "neighborhood": "Bairro teste",
+            "city": "Cidade de teste",
+            "region": "SC",
+            "country": "BR",
+            "postcode": "68909-827"
+        },
+        "shipping_address": {
+            "street": "Rua de teste",
+            "number": 1234,
+            "detail": "Ponto de referência teste",
+            "neighborhood": "Bairro teste",
+            "city": "Cidade de teste",
+            "region": "SC",
+            "country": "BR",
+            "postcode": "68909-827"
+        },
+        "shipping_method": "Transportadora",
+        "estimated_delivery": "2025-01-10",
+        "shipping_calculation_type": "Método do Cálculo",
+        "shipping_cost": 5,
+        "interest": 0,
+        "discount": 0,
+        "payments": [
+            {
+                "method": "BANK_SLIP",
+                "description": "Visa",
+                "parcels": 1,
+                "value": 13.45
+            }
+        ]
+    }
+}

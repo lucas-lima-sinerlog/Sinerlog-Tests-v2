@@ -1,0 +1,11 @@
+{
+    "zipCode": "04757020",
+    "currency": "BRL",
+    "items": [
+      {
+        "sku": "4000",
+        "quantity": 2,
+        "unitValue": 10
+      }
+    ]
+  }

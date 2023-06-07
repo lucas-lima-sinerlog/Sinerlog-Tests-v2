@@ -1,0 +1,32 @@
+{
+  "name": "sinerlog-tests-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open-local": "npx cypress open --env debug=true,env=local",
+    "open-hml": "npx cypress open --env debug=true,env=hml,TAGS=\"(@front-end or @Back-end) and not (@incomplete or @Not-Implemented or @Paused)\"",
+    "open-prod": "npx cypress open --env debug=true,env=prod",
+    "open-dev": "npx cypress open --env debug=true,env=dev,TAGS=\"(@Front-End or @Back-end) and not (@incomplete or @Not-Implemented)\"",
+    "open-hub-dev-smoke": "npx cypress open --env debug=true,env=dev,TAGS=\"(@Smoke and @HUB) and not (@incomplete or @Not-Implemented)\"",
+    "open-hub-prod-smoke": "npx cypress open --env debug=true,env=prod,TAGS=\"(@Smoke and @HUB) and not (@incomplete or @Not-Implemented)\"",
+    "run-dev-tracking-api": "npx cypress run --spec 'cypress/e2e/Tracking.feature' --record --key 4c44def3-1271-4d89-a721-827dc63c446d --env debug=true,env=dev,TAGS=\"@TrackingApi and not (@incomplete or @Not-Implemented)\"",
+    "run-dev-zipcode-validation": "npx cypress run --record --key 4c44def3-1271-4d89-a721-827dc63c446d --env debug=true,env=dev,TAGS=\"@ZipCode-Validation and not (@incomplete or @Not-Implemented)\"",
+    "sst-smoke-prod": "npx cypress run --record --key 4c44def3-1271-4d89-a721-827dc63c446d --env debug=true,env=prod,TAGS=\"(@SST and @Smoke)\"",
+    "sst-smoke-dev": "npx cypress run --record --key 4c44def3-1271-4d89-a721-827dc63c446d --env debug=true,env=dev,TAGS=\"(@SST and @Smoke)\"",
+    "run-prod-sst-healthcheck": "npx cypress run --spec 'cypress/e2e/Package.feature' --record --key 4c44def3-1271-4d89-a721-827dc63c446d --env debug=true,env=prod,TAGS=\"@sst-healthcheck and not (@incomplete or @Not-Implemented)\"",
+    "open-dev-front": "npx cypress open --env debug=true,env=dev,TAGS=\"@front-end and not (@incomplete or @Not-Implemented)\"   ",
+    "open-dev-back": "npx cypress open --env debug=true,env=dev,TAGS=\"@Back-end and not (@incomplete or @Not-Implemented)\"",
+    "run-dev": "npx cypress run --env debug=true,env=dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "cypress": "^12.13.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}

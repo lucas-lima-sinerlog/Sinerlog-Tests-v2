@@ -1,0 +1,13 @@
+{
+    "name" : "sdf",
+    "ean": "0545613165465",
+    "code": "SHIRT02BLUE",
+    "description": "T-shirt blue",
+    "height": 10.5,
+    "length": 10.3,
+    "width": 10.7,
+    "weigth": 100,
+    "price": 10.4,
+    "specialPrice": 9.5,
+    "productFeaturesOptions": []
+}

@@ -1,0 +1,27 @@
+{
+    "recipient": {
+      "complement": "Sinerlog - updated",
+      "name": "Sinerlog - updated",
+      "address": "Rua Ipanema - updated",
+      "number": "600",
+      "neighboord": "Barra da Tijuca - updated",
+      "zipCode": "22631400",
+      "city": "Rio de Janeiro - updated",
+      "state": "RJ",
+      "phone": "21987502666",
+      "email": "sinerlog@updated.com.br",
+      "document": "85182614063"
+    },
+    "shippingSellerId": 5,
+    "amount": 200,
+    "width": 15,
+    "height": 15,
+    "length": 15,
+    "diameter": 15,
+    "weight": 15,
+    "deliveryType": "Express",
+    "invoiceNumber": "KJHB302117XX8X01",
+    "invoiceKey": "51080701212344000127550010000000981364117X78X1",
+    "itemDescription": "Gaming Chair - updated",
+    "insurance": false
+  }

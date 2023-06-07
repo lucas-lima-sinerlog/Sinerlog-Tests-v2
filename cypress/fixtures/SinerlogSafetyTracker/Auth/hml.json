@@ -1,0 +1,8 @@
+{
+    "grant_type": "password",
+    "client_id": "1",
+    "client_secret": "1VZlziQ8J2obtEg1NByxxnC4DJqq6BeXs2Lxgkry",
+    "username": "hub-svc@sinerlog.global",
+    "password": "hub!123456",
+    "scope": "*"
+  }

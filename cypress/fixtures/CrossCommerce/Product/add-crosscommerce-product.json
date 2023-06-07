@@ -1,0 +1,32 @@
+{
+  "productCategoryId": 2,
+  "additionalCategories": null,
+  "productBrandId": 25,
+  "name": "Pen Drive",
+  "skuCode": "MWS2345342",
+  "description": "Pen Drive 32GB Sinerlog",
+  "hsCode": "852351",
+  "ncm": "852351",
+  "width": 50,
+  "height": 20,
+  "length": 30,
+  "weight": 10,
+  "inventory": 100,
+  "currency": "USD",
+  "price": 10.5,
+  "specialPrice": 8.5,
+  "ean": "121545121",
+  "cost": 5,
+  "specifications": {
+    "Color": "Black"
+  },
+  "saleChannels": [
+    5,
+    10
+  ],
+  "defaultAllSaleChannels": true,
+  "createdBy": "joe.due@sinerlog.global",
+  "productFeatures": [
+    32
+  ]
+}

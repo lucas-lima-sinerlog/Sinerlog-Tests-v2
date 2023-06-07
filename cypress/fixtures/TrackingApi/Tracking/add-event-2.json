@@ -1,0 +1,12 @@
+{
+    "body": {
+      "description": "Body",
+      "example": {
+        "teste": "Valor"
+      }
+    },
+    "externalCode": "Ta na mao", 
+    "occurredAt": "2023-03-18T00:00:00",
+    "providerCode": 12,
+    "observation": ""
+  }

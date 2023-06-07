@@ -1,0 +1,33 @@
+{
+  "recipient": {
+    "complement": "Cy-complement",
+    "name": "Cy-name",
+    "address": "Rua Mário Kiem",
+    "number": "510",
+    "neighboord": "Cy-neighboord",
+    "zipCode": "89280163",
+    "city": "São Bento do Sul",
+    "state": "SC",
+    "phone": "21987502777",
+    "email": "cypress@node.js",
+    "document": "55639176067"
+  },
+  "items": [
+    {
+      "description": "Bola de Futebol",
+      "quantity": 2,
+      "value": 50
+    }
+  ],
+  "shippingSellerId": 1,
+  "amount": 100,
+  "width": 20,
+  "height": 10,
+  "length": 10,
+  "diameter": 10,
+  "weight": 10,
+  "deliveryType": "Standard",
+  "invoiceNumber": "KJHB302117801",
+  "invoiceKey": "51080701212344000127550010000000981364117781",
+  "insurance": true
+}

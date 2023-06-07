@@ -1,0 +1,55 @@
+{
+  "description": "eletronics",
+  "orderNumber": "2023050803",
+  "weight": "500",
+  "height": "25",
+  "width": "25",
+  "length": "25",
+  "totalAmount": 150,
+  "currency": "USD",
+  "deliveryType": "EX",
+  "nationalization_status_code": "1",
+  "logistic_modality": "postal",
+  "deliveryTax": "1",
+  "tax_service": "2",
+  "seller": {
+      "name": "mia.com",
+      "document": "",
+      "email": "",
+      "phone": "",
+      "address": {
+          "street": "street 20",
+          "street2": "",
+          "number": "25",
+          "complement": "",
+          "city": "",
+          "province": "",
+          "zipcode": ""
+      }
+  },
+  "customer": {
+      "name": "gislaine",
+      "document": "28677101896",
+      "email": "gislaine.marques@sinerlog.global",
+      "phone": "14 98752 2258"
+  },
+  "products": [
+      {
+          "sh_code": 960110,
+          "name": "video game",
+          "code": "258-DA-938",
+          "qty": "1",
+          "value": "150",
+          "insurance": true
+      }
+  ],
+  "shippingAddress": {
+      "street": "rua alfredo ruiz",
+      "street2": "",
+      "number": "19855",
+      "complement": "",
+      "city": "bauru",
+      "province": "sp",
+      "zipcode": "17014120"
+  }
+}

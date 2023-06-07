@@ -1,0 +1,16 @@
+{
+    "code": "886",
+    "name": "Sinerlog",
+    "document": "35570508074",
+    "email": "exemplo@sinerlog.global",
+    "phone": "19957280177",
+    "shippingSellerAddress": {
+      "address": "Rua do Brasil",
+      "city": "São Paulo",
+      "number": "108",
+      "state": "SP",
+      "zipcode": "11530000",
+      "complement": "Apto 123",
+      "neighborhood": "Sapopemba"
+    }
+  }

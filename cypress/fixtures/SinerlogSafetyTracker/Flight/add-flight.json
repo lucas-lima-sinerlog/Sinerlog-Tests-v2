@@ -1,0 +1,13 @@
+{
+    "mawb": "test-flight-00001",
+    "number": "00001",
+    "etd": "2022-07-13 01:00:00",
+    "eta": "2022-07-13 06:00:00",
+    "airlineCode": "AA",
+    "airlineName": "AMERICAN AIRLINES",
+    "airportDeparture": "MIA",
+    "airportDestination": "GRU",
+    "unitizations": [
+        
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "bag_code": null,
+    "seal_barcode": "1234",
+    "unitization_type": 2,
+    "weight": 288,
+    "height": 102,
+    "width": 120,
+    "length": 119,
+    "orders": [
+        {"tracking_number": ""}
+    ]
+}

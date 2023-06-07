@@ -1,0 +1,15 @@
+{
+    "queryStrings": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "headers": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "url": "https://www.google.com.br/",
+    "active": true,
+    "name": "string"
+  }
