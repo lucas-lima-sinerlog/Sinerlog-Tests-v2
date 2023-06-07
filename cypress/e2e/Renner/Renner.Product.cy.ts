@@ -115,7 +115,7 @@ describe('Export a Double Sku Product to Renner Integration', () => {
         })
 
     });
-    it('Waits for Product Export process', () => { cy.wait(120000) });
+    it('Waits for Product Export process', () => { cy.wait(40000) });
 
     it('Gets the exported Product from Renner Integration', () => {
 

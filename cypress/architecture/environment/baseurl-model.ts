@@ -105,7 +105,7 @@ export class BaseUrl {
             'https://sinerlog-renner-connector.dev.sinerlog.log.br',
             'https://sinerlog-renner-connector.dev.sinerlog.log.br',
             'https://sinerlog-renner-connector.dev.sinerlog.log.br',
-            'https://sinerlog-renner-connector.dev.sinerlog.log.br'
+            'https://localhost:7118'
         )
 
         this.CrossBorderEPortal = SelectEnvironmentValue('https://portalrfb.dev.sinerlog.log.br', 'null', 'https://trust.sinerlog.global', 'null')
