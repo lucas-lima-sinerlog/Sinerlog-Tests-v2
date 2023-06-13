@@ -3,8 +3,7 @@ import { CrossCommerceOrderWebClient } from "../../architecture/webclients/Cross
 import { RennerOrder } from "../../architecture/models/Renner/Renner.Order.Model";
 import { CrossCommerceOrder } from "../../architecture/models/CrossCommerce/CrossComerce.Order.Model";
 import { SetPayloadFromFixture } from "../../architecture/utils/SetPayloadFromFixture";
-import { Logger } from "../../architecture/utils/Logger";
-
+import { IntegrationTime } from "../../architecture/constants/IntegrationTime";
 
 describe('Import an Order from Renner Integration and Mark as Paid (All Fields Validation)', () => {
 
@@ -21,7 +20,7 @@ describe('Import an Order from Renner Integration and Mark as Paid (All Fields V
 
     it('Waits for the Import Order Process', () => {
 
-        cy.wait(30000)
+        cy.wait(IntegrationTime.RENNER_ORDER)
 
     });
 
@@ -55,32 +54,31 @@ describe('Import an Order from Renner Integration and Mark as Paid (All Fields V
 
             //Adress Validations
 
-            //Shipping Address
-            expect(+response.body.shippingAddress.number, 'Shipping Address Number').to.be.equals(rennerOrder.shipping.address.number)
-            expect(response.body.shippingAddress.complement, 'Shipping Address Complement').to.be.equals(rennerOrder.shipping.address.complement)
-            expect(response.body.shippingAddress.countryCode, 'Shipping Address CountryCode').to.be.equals(rennerOrder.shipping.address.country)
+            // - Shipping Address
+            expect(+response.body.shippingAddress.number, 'Shipping Address Number / CrossCommerce Address Number').to.be.equals(rennerOrder.shipping.address.number)
+            expect(response.body.shippingAddress.complement, 'Shipping Address Complement / CrossCommerce Address Complement').to.be.equals(rennerOrder.shipping.address.complement)
+            expect(response.body.shippingAddress.countryCode, 'Shipping Address CountryCode / CrossCommerce Address Country').to.be.equals(rennerOrder.shipping.address.country)
 
-            //Billing Address
-            expect(+response.body.billingAddress.number, 'Billing Address Number').to.be.equals(rennerOrder.shipping.address.number)
-            expect(response.body.billingAddress.complement, 'Billing Address Complement').to.be.equals(rennerOrder.shipping.address.complement)
-            expect(response.body.billingAddress.countryCode, 'Billing Address CountryCode').to.be.equals(rennerOrder.shipping.address.country)
+            // - Billing Address
+            expect(+response.body.billingAddress.number, 'Billing Address Number / CrossCommerce Address Number').to.be.equals(rennerOrder.shipping.address.number)
+            expect(response.body.billingAddress.complement, 'Billing Address Complement / CrossCommerce Address Complement').to.be.equals(rennerOrder.shipping.address.complement)
+            expect(response.body.billingAddress.countryCode, 'Billing Address CountryCode / CrossCommerce Address Country').to.be.equals(rennerOrder.shipping.address.country)
 
             //Adress Validations (from Via Cep)
             cy.request('GET', `https://viacep.com.br/ws/${rennerOrder.shipping.address.postalCode}/json/`).then(viaCepResonse => {
-                //Shipping Address
-                expect(response.body.shippingAddress.street, 'Shipping Address Street').to.be.equals(viaCepResonse.body.logradouro)
-                expect(response.body.shippingAddress.city, 'Shipping Address City').to.be.equals(viaCepResonse.body.localidade)
-                expect(response.body.shippingAddress.state, 'Shipping Address State').to.be.equals(viaCepResonse.body.uf)
-                expect(response.body.shippingAddress.zipcode.replace(/-/g, ''), 'Shipping Address ZipCode').to.be.equals(viaCepResonse.body.cep.replace(/-/g, ''))
-              //  expect(response.body.shippingAddress.neighborhood, 'Shipping Address Neighborhood').to.be.equals(viaCepResonse.body.bairro)
+                // - Shipping Address
+                expect(response.body.shippingAddress.street, 'Shipping Address Street / ViaCep Logradouro').to.be.equals(viaCepResonse.body.logradouro)
+                expect(response.body.shippingAddress.city, 'Shipping Address City / ViaCep Localidade').to.be.equals(viaCepResonse.body.localidade)
+                expect(response.body.shippingAddress.state, 'Shipping Address State / ViaCep UF').to.be.equals(viaCepResonse.body.uf)
+                expect(response.body.shippingAddress.zipcode.replace(/-/g, ''), 'Shipping Address ZipCode / ViaCep CEP').to.be.equals(viaCepResonse.body.cep.replace(/-/g, ''))
+                expect(response.body.shippingAddress.neighborhood, 'Shipping Address Neighborhood / ViaCep Neighborhood').to.be.equals(viaCepResonse.body.bairro)
 
-                //Billing Address
-                expect(response.body.billingAddress.street, 'Billing Address Street').to.be.equals(viaCepResonse.body.logradouro)
-                expect(response.body.billingAddress.city, 'Billing Address City').to.be.equals(viaCepResonse.body.localidade)
-                expect(response.body.billingAddress.state, 'Billing Address State').to.be.equals(viaCepResonse.body.uf)
-                expect(response.body.billingAddress.zipcode.replace(/-/g, ''), 'Billing Address ZipCode').to.be.equals(viaCepResonse.body.cep.replace(/-/g, ''))
-                expect(response.body.billingAddress.neighborhood, 'Billing Address Neighborhood').to.be.equals(viaCepResonse.body.bairro)
-
+                // - Billing Address
+                expect(response.body.billingAddress.street, 'Billing Address Street / ViaCep Logradouro').to.be.equals(viaCepResonse.body.logradouro)
+                expect(response.body.billingAddress.city, 'Billing Address City / ViaCep Localidade').to.be.equals(viaCepResonse.body.localidade)
+                expect(response.body.billingAddress.state, 'Billing Address State / ViaCep UF').to.be.equals(viaCepResonse.body.uf)
+                expect(response.body.billingAddress.zipcode.replace(/-/g, ''), 'Billing Address ZipCode / ViaCep CEP').to.be.equals(viaCepResonse.body.cep.replace(/-/g, ''))
+                expect(response.body.billingAddress.neighborhood, 'Billing Address Neighborhood / ViaCep Neighborhood').to.be.equals(viaCepResonse.body.bairro)
 
             })
 
@@ -96,18 +94,17 @@ describe('Import an Order from Renner Integration and Mark as Paid (All Fields V
 
     });
 
-    it('Wait for cancelation integration', () => {
+    it('Wait for Payment integration', () => {
 
-        cy.wait(5000)
+        cy.wait(IntegrationTime.RENNER_ORDER)
 
     });
 
-    it('Gets the imported Order in CrossCommerce', () => {
+    it('Gets the paid Order in CrossCommerce', () => {
 
         CrossCommerceOrderWebClient.GetByCode(crossCommerceOrder).then(_ => { })
 
     });
-
 
 
 });

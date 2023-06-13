@@ -7,18 +7,31 @@ import { CrossCommerceWebClientBase } from "./CrossCommerce.WebClient.Base";
 
 export class CrossCommerceProductWebClient extends CrossCommerceWebClientBase {
 
-    static Add(product: CrossCommerceProduct, brand: CrossCommerceProductBrand, category: CrossCommerceProductCategory, feature: CrossCommerceProductFeature) {
+  static Add(product: CrossCommerceProduct, brand: CrossCommerceProductBrand, category: CrossCommerceProductCategory, feature: CrossCommerceProductFeature) {
 
-        product.payload.productBrandId = brand.id
-        product.payload.productCategoryId = category.id
-        product.payload.productFeatures = [feature.id]
+    // Dependencies
+    product.payload.productBrandId = brand.id
+    product.payload.productCategoryId = category.id
+    product.payload.productFeatures = [feature.id]
 
-        SetProprietyInPayload(product, "skuCode")
+    //Unique value
+    SetProprietyInPayload(product, "skuCode")
+    SetProprietyInPayload(product, "name")
+    SetProprietyInPayload(product, "description")
 
-        return super.Request('/Product', 'POST', product).then(response => {
-          product.id = response.body.id
-        })
+    return super.Request('/Product', 'POST', product).then(response => {
+      product.id = response.body.id
+    })
 
-    }
+  }
+
+  static Update(product: CrossCommerceProduct) {
+
+    SetProprietyInPayload(product, "skuCode")
+    SetProprietyInPayload(product, "name")
+
+    super.Request(`/Product/${product.id}`, 'PUT', product)
+
+  }
 
 }

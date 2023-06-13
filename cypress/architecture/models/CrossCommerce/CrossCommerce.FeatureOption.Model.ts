@@ -7,7 +7,7 @@ export class CrossCommerceFeatureOption extends ModelBase {
 
     constructor() {
         super();
-        this.value = faker.word.adjective()
+        this.value = 'Option - ' + faker.word.adjective()
 
     }
 
