@@ -1,3 +1,5 @@
+import { CrossCommerce } from "../../environment/CrossCommerce.Env";
+import { Env } from "../../environment/environment";
 import { CrossCommerceFeatureOption } from "../../models/CrossCommerce/CrossCommerce.FeatureOption.Model";
 import { CrossCommerceProduct } from "../../models/CrossCommerce/CrossCommerce.Product.Model";
 import { CrossCommerceProductSku } from "../../models/CrossCommerce/CrossCommerce.ProductSku.Model";
@@ -6,10 +8,10 @@ import { CrossCommerceWebClientBase } from "./CrossCommerce.WebClient.Base";
 
 export class CrossCommerceProductSkuWebClient extends CrossCommerceWebClientBase {
 
-    static Add(productSku: CrossCommerceProductSku, product: CrossCommerceProduct, featureOption: CrossCommerceFeatureOption) {
+    static Add(productSku: CrossCommerceProductSku, product: CrossCommerceProduct, featureOption?: CrossCommerceFeatureOption) {
 
         // Dependencies feed
-        productSku.payload.productFeaturesOptions = [featureOption.id]
+        !featureOption ? productSku.payload.productFeaturesOptions = [Env.CrossCommerce.productFeatureOptionId] : productSku.payload.productFeaturesOptions = [featureOption.id]
 
         // Sku feed
         SetProprietyInPayload(productSku, 'code')
@@ -18,7 +20,7 @@ export class CrossCommerceProductSkuWebClient extends CrossCommerceWebClientBase
         SetProprietyInPayload(productSku, 'width')
         SetProprietyInPayload(productSku, 'height')
         SetProprietyInPayload(productSku, 'length')
-        SetProprietyInPayload(productSku, 'weigth')
+        SetProprietyInPayload(productSku, 'weight')
 
         // Request
         return super.Request(`/ProductSku/${product.id}`, 'POST', productSku).then(response => {

@@ -144,8 +144,8 @@ describe('Export a Double Sku Product to Renner Integration', () => {
                 expect(firstRennerSku.price, 'Renner Price / CrossCommerce Price').to.be.equals(crossCommerceProductSku.price)
                 expect(firstRennerSku.packageDimension.width, 'Renner Width / CrossCommerce Width').to.be.equals(crossCommerceProductSku.width)
                 expect(firstRennerSku.packageDimension.height, 'Renner Height / CrossCommerce Height').to.be.equals(crossCommerceProductSku.height)
-                expect(firstRennerSku.packageDimension.length, 'Renner Length / CrossCommerce Length').to.be.equals(crossCommerceProductSku.length)
-                expect(firstRennerSku.packageDimension.weight, 'Renner Weight / CrossCommerce Weight').to.be.equals(crossCommerceProductSku.height)
+              expect(firstRennerSku.packageDimension.length, 'Renner Length / CrossCommerce Length').to.be.equals(crossCommerceProductSku.length)
+              expect(firstRennerSku.packageDimension.weight, 'Renner Weight / CrossCommerce Weight').to.be.equals(crossCommerceProductSku.height)
 
                 //Second Sku Validation
                 expect(+secondRennerSku.partnerId, 'Renner Partner Id / CrossCommerce Id').to.be.equals(secondCrossCommerceProductSku.id)
@@ -153,8 +153,8 @@ describe('Export a Double Sku Product to Renner Integration', () => {
                 expect(secondRennerSku.price, 'Renner Price / CrossCommerce Price').to.be.equals(secondCrossCommerceProductSku.price)
                 expect(secondRennerSku.packageDimension.width, 'Renner Width / CrossCommerce Width').to.be.equals(secondCrossCommerceProductSku.width)
                 expect(secondRennerSku.packageDimension.height, 'Renner Height / CrossCommerce Height').to.be.equals(secondCrossCommerceProductSku.height)
-                expect(secondRennerSku.packageDimension.length, 'Renner Length / CrossCommerce Length').to.be.equals(secondCrossCommerceProductSku.length)
-                expect(secondRennerSku.packageDimension.weight, 'Renner Weight / CrossCommerce Weight').to.be.equals(secondCrossCommerceProductSku.height)
+               expect(secondRennerSku.packageDimension.length, 'Renner Length / CrossCommerce Length').to.be.equals(secondCrossCommerceProductSku.length)
+               expect(secondRennerSku.packageDimension.weight, 'Renner Weight / CrossCommerce Weight').to.be.equals(secondCrossCommerceProductSku.height)
 
             })
 

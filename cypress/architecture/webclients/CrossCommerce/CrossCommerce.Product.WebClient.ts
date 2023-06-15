@@ -1,3 +1,4 @@
+import { Env } from "../../environment/environment";
 import { CrossCommerceProduct } from "../../models/CrossCommerce/CrossCommerce.Product.Model";
 import { CrossCommerceProductBrand } from "../../models/CrossCommerce/CrossCommerce.ProductBrand.Model";
 import { CrossCommerceProductCategory } from "../../models/CrossCommerce/CrossCommerce.ProductCategory.Model";
@@ -7,12 +8,12 @@ import { CrossCommerceWebClientBase } from "./CrossCommerce.WebClient.Base";
 
 export class CrossCommerceProductWebClient extends CrossCommerceWebClientBase {
 
-  static Add(product: CrossCommerceProduct, brand: CrossCommerceProductBrand, category: CrossCommerceProductCategory, feature: CrossCommerceProductFeature) {
+  static Add(product: CrossCommerceProduct, brand?: CrossCommerceProductBrand, category?: CrossCommerceProductCategory, feature?: CrossCommerceProductFeature) {
 
     // Dependencies
-    product.payload.productBrandId = brand.id
-    product.payload.productCategoryId = category.id
-    product.payload.productFeatures = [feature.id]
+    !brand ? product.payload.productBrandId = Env.CrossCommerce.productBrandId : product.payload.productBrandId = brand.id
+    !category ? product.payload.productCategoryId = Env.CrossCommerce.productCategoryId : product.payload.productCategoryId = category.id
+    !feature ? product.payload.productFeatures = Env.CrossCommerce.productFeatures : product.payload.productFeatures = [feature.id]
 
     //Unique value
     SetProprietyInPayload(product, "skuCode")

@@ -7,7 +7,7 @@ export class CrossCommerceProductSku extends ModelBase {
     length: number
     price: number
     width: number
-    weigth: number
+    weight: number
 
     ean: string
 
@@ -19,7 +19,7 @@ export class CrossCommerceProductSku extends ModelBase {
         this.width = faker.number.float({precision: 0.1 , min: 10, max: 500})
         this.height = faker.number.float({precision: 0.1 , min: 10, max: 500})
         this.length = faker.number.float({precision: 0.1 , min: 10, max: 500})
-        this.weigth = faker.number.int(100)
+        this.weight = faker.number.int(100)
     }
 
 
@@ -30,6 +30,6 @@ export class CrossCommerceProductSku extends ModelBase {
         this.width = faker.number.float({precision: 0.1 , min: 10, max: 20})
         this.height = faker.number.float({precision: 0.1 , min: 10, max: 20})
         this.length = faker.number.float({precision: 0.1 , min: 10, max: 20})
-        this.weigth = faker.number.int(100)
+        this.weight = faker.number.int(100)
     }
 }
