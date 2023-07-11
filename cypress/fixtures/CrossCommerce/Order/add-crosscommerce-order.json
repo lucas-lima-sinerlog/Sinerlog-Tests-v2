@@ -5,11 +5,12 @@
   "comments": "Special Price",
   "placedAt": "2022-03-30T00:00:00",
   "estimatedDueDate": "2022-04-30T00:00:00",
-  "totalItems": 30,
+  "totalItems": 15,
   "totalTax": 100,
   "totalShipping": 10,
+  "totalInsurance": 20,
   "totalDiscount": 5,
-  "totalAmount": 135,
+  "totalAmount": 120,
   "saleChannelId": 1,
   "items": [
     {
@@ -17,7 +18,7 @@
       "gift": false,
       "code": "84393249",
       "unitPrice": 15,
-      "quantity": 2
+      "quantity": 1
     }
   ],
   "payments": [

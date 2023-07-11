@@ -17,12 +17,8 @@ export class RennerOrderWebClient extends RennerConnectorWebClientBase {
 
     }
 
-    static Cancel(order: RennerOrder) {
-        super.Request(`/Order/${order.marketplaceOrderId}/markAsCanceled`, 'PUT', order)
-    }
+    static Cancel(order: RennerOrder) { super.Request(`/Order/${order.marketplaceOrderId}/markAsCanceled`, 'PUT', order) }
 
-    static Paid(order: RennerOrder) {
-        super.Request(`/Order/${order.marketplaceOrderId}/markAsPaid`, 'PUT', order)
-    }
-
+    static Paid(order: RennerOrder) { super.Request(`/Order/${order.marketplaceOrderId}/markAsPaid`, 'PUT', order) }
+    
 }

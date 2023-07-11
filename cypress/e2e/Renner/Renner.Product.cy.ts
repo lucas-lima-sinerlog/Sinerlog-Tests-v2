@@ -84,6 +84,7 @@ describe('Export a Double Sku Product to Renner Integration', () => {
             })
 
     });
+
     it('Creates a Product Sku', () => {
 
         SetPayloadFromFixture('CrossCommerce/ProductSku/add-crosscommerce-product-sku.json', crossCommerceProductSku).then(

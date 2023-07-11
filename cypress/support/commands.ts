@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('checkStatusCode', (response: any, statusCode: number) => {
+  expect(response.status, 'Response Status:').to.be.equal(statusCode)
+});
+
+Cypress.Commands.add('checkFieldEqualty', (response: any, fieldName: string, value: any) => {
+  expect(response.body[fieldName], `Reponse field '${fieldName}' validation`).to.be.equal(value)
+});
+
+Cypress.Commands.add('checkErrorMessage', (response: any, fieldName: string, message: any) => {
+  console.log(response.body.errors[fieldName]);
+  
+  expect(response.body.errors[fieldName], `Error message validation'`).to.contains(message)
+});
