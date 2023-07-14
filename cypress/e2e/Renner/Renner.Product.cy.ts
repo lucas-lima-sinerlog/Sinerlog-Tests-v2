@@ -118,6 +118,12 @@ describe('Export a Double Sku Product to Renner Integration', () => {
     });
     it('Waits for Product Export process', () => { cy.wait(100000) });
 
+    it('wait', () => {
+
+        cy.pause()
+      
+    })
+
     it('Gets the exported Product from Renner Integration', () => {
 
         RennerWebClientBase.Auth().then(__ => {

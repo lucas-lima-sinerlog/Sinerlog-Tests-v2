@@ -354,9 +354,11 @@ describe.only('SISCOMEX', () => {
     const crossCommerceOrder = new CrossCommerceOrder
 
     it('Creates an Order', () => {
-
         SetPayloadFromFixture('CrossCommerce/Order/add-crosscommerce-order', crossCommerceOrder).then(__ => {
-            CrossCommerceOrderWebClient.Add(crossCommerceOrder)
+            crossCommerceOrder.CalculateTotalAmount()
+            CrossCommerceOrderWebClient.Add(crossCommerceOrder).then(response => {
+                cy.checkStatusCode(response, 201)              
+            })
         })
 
     });

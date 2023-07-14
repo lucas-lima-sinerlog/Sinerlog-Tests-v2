@@ -47,9 +47,11 @@ export class CrossCommerceOrder extends ModelBase {
         this.payments.method = "CreditCard"
         this.payments.cardBrand = "Visa"
 
+
     }
 
     CalculateTotalAmount() {
+        
         for (const item of this.payload.items) {
             this.totalItems += item.unitPrice;
           }
