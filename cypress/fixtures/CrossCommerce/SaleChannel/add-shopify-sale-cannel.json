@@ -1,0 +1,11 @@
+{
+    "name": "Classic Store",
+    "status": "Connect",
+    "channel": "Skyhub",
+    "url": "www.americanas.com.br",
+    "credentials": {
+        "accessToken": "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",
+        "storeName": "sinerlog",
+        "apiVersion": "2023-07"
+    }
+}

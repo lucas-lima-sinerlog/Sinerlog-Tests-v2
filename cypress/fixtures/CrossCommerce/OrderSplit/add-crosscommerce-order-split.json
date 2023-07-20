@@ -1,0 +1,74 @@
+{
+    "splitId": "AM123BR",
+    "orders": [
+      {
+        "code": "AM301000101BR",
+        "shippingMethod": "Express",
+        "currency": "BRL",
+        "comments": "Special Price",
+        "placedAt": "2023-01-30T00:00:00",
+        "estimatedDueDate": "2023-02-03T00:00:00",
+        "totalItems": 120,
+        "totalTax": 30,
+        "totalShipping": 20,
+        "totalInsurance": 10,
+        "totalDiscount": 30,
+        "totalAmount": 150,
+        "saleChannelId": 1,
+        "deliveryTax": "DDP",
+        "items": [
+          {
+            "code": "84393249",
+            "taxModality": "Simplified",
+            "unitPrice": 24,
+            "quantity": 5
+          }
+        ],
+        "customer": {
+          "name": "Jose da Silva",
+          "document": "45570179836",
+          "email": "joao@dasilva.com.br",
+          "phone": "11985096995",
+          "address": {
+            "street": "Rua Ipanema ",
+            "number": "123",
+            "complement": "Apt 108",
+            "city": "Rio de Janeiro",
+            "state": "RJ",
+            "neighborhood": "Barra da Tijuca",
+            "zipcode": "22631390",
+            "countryCode": "BR"
+          }
+        },
+        "shippingAddress": {
+          "street": "Rua Ipanema ",
+          "number": "123",
+          "complement": "Apt 108",
+          "city": "Rio de Janeiro",
+          "state": "RJ",
+          "neighborhood": "Barra da Tijuca",
+          "zipcode": "22631390",
+          "countryCode": "BR"
+        },
+        "billingAddress": {
+          "street": "Rua Ipanema ",
+          "number": "123",
+          "complement": "Apt 108",
+          "city": "Rio de Janeiro",
+          "state": "RJ",
+          "neighborhood": "Barra da Tijuca",
+          "zipcode": "22631390",
+          "countryCode": "BR"
+        }
+      }
+    ],
+    "payments": [
+      {
+        "method": "CreditCard",
+        "cardBrand": "Visa",
+        "total": 140,
+        "transactionId": "81818",
+        "currency": "BRL"
+      }
+    ]
+  }
